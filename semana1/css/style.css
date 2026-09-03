@@ -1,0 +1,50 @@
+body{
+    background-color: #072f80;
+    color: #e09999 /* color de fondo */
+    
+}
+
+header{
+    background-color: #1b3d6a;
+    color: rgb(17, 238, 212);
+    text-align: center;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 28px;
+        }
+
+nav{
+    background-color: rgb(135, 3, 113);
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.container{
+    max-width: 760px;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.container article{
+    background-color:#3730a2;
+    padding: 20px;
+ }
+footer{
+    background-color: #123B7A;
+    color: #f0a7e6;
+    text-align: center;
+    padding: 20px;
+}
+
+.table{
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+}

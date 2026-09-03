@@ -1,0 +1,30 @@
+h1 {
+    color:aquamarine;
+    text-align: center;
+    text-decoration: underline;
+    }
+
+body {
+     background-color: rgb(97, 4, 44);
+    }
+
+p {
+    text-align: center;
+    text-decoration: underline;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgb(70, 9, 9);
+    border-radius: 10px;
+    }
+
+
+/*
+*{
+    border: 1px;
+    border-style: dotted;
+}
+    esto es el selector universla
+/*

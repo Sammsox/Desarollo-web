@@ -30,6 +30,7 @@ div.contenido {
 .parrafo3 {
     font-family: georgia, "times new roman", times, serif;
 }
+/* Esto afecto el tipo de fuente o letra de los párrafos */
 
 div.autor{
     font-style: italic;
@@ -39,4 +40,5 @@ p.julio{
     font-size: 14px;
 }
 
+/*esto esta cambiando el tamano de el parrafo julio y el tipo de letra de div.autor*/
 

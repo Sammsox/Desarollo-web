@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(92, 3, 169);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#titulo-principal {
+    color: rgb(10, 231, 10);
+    font-size: 35px;
+    text-decoration: underline;
+}
+#desc-serie {
+    color: rgba(100, 228, 158, 0.666);
+    font-size: 16px;
+}
+
+h2 {
+    color: rgb(9, 167, 181);
+    background-color: rgba(246, 138, 224, 0.405);
+    border: 1px solid rgb(61, 223, 215);
+    padding: 5px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+h3 {
+    color: rgba(71, 150, 71, 0.719);
+}
+
+.personaje {
+    background-color: rgba(81, 234, 140, 0.399);
+    border: 2px solid rgb(65, 184, 231);
+    width: 400px;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+.personaje img {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.invento {
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    color: rgba(10, 128, 81, 0.937);
+    font-size: 16px;
+}
+
+.img-invento {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+
+#desc-rick {
+    color: navy;
+    font-size: 14px;
+}
+
+#desc-morty {
+    color: rgb(35, 23, 121);
+    font-size: 14px;
+}
+
+
+a {
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+
+table {
+    margin: 0 auto;
+    background-color: rgb(98, 38, 38);
+    width: 350px;
+}
+
+th {
+    background-color: rgb(238, 87, 230);
+    color: black;
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: gray;
+}

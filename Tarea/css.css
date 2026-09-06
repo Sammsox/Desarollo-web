@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(84, 146, 166);
+}
+
+.di{
+    font-size: 20px;
+}
+
+h2{
+    color: white;
+}
+.style{
+    text-decoration: underline;
+}
+
+#p1{
+    color: bold;
+}
+
+#p2{
+    text-transform: uppercase;
+    text-alingn: justify;
+}
+#p3{
+    font-size: 12px;
+}
+
+.sp{
+    font-style: italic;
+}

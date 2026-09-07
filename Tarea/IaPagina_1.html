@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McDonald's El Salvador — Tu antojo, a la orden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="iapagina_1.css">
+
+<header>
+  <div class="envoltura barra-superior">
+    <a href="#inicio" class="logo" aria-label="McDonald's El Salvador, ir al inicio">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="17" fill="#D8261D"/>
+        <path d="M8 25V11.5C8 10.5 8.7 10 9.4 10C9.9 10 10.4 10.3 10.7 10.9L14.3 18.5C14.5 19 15 19 15.2 18.5L18.8 10.9C19.1 10.3 19.6 10 20.1 10C20.8 10 21.5 10.5 21.5 11.5V25" stroke="#FFC629" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M24 25V13.5C24 12.4 24.9 11.7 25.8 12.１C26.2 １２．３ ２６．５ １２．７ ２６．５ １３．２V２５" stroke="#FFC629" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>McDonald's <strong>SV</strong></span>
+    </a>
+    <nav class="principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#promos">Promociones</a></li>
+        <li><a href="#app">App y delivery</a></li>
+        <li><a href="#restaurantes">Restaurantes</a></li>
+        <li><a href="#trabaja">Trabaja con nosotros</a></li>
+      </ul>
+    </nav>
+    <div class="acciones-header">
+      <a href="#restaurantes" class="enlace-ubicacion">📍 San Salvador</a>
+      <a href="#pedir" class="boton-header">Ordena ahora</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:74px;">
+    <div class="envoltura hero-grid">
+      <div class="hero-texto">
+        <span class="distintivo-hero"><span class="punto"></span> Nuevo en el menú esta temporada</span>
+        <h1>Tu antojo, <em>listo en minutos.</em></h1>
+        <p>Pide tus favoritos de siempre —Big Mac, Cuarto de Libra o una Cajita Feliz— y recíbelos calientitos en la puerta de tu casa o pasa por el auto-servicio más cercano.</p>
+        <div class="hero-acciones">
+          <a href="#pedir" class="boton boton-primario">Ordenar para entrega</a>
+          <a href="#restaurantes" class="boton boton-fantasma">Buscar restaurante</a>
+        </div>
+        <div class="hero-precio">
+          <div>
+            <strong>+45</strong>
+            <span>restaurantes en el país</span>
+          </div>
+          <div>
+            <strong>20 min</strong>
+            <span>tiempo promedio de entrega</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>sucursales con servicio nocturno</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-ilustracion">
+        <div class="plato-radiante" aria-hidden="true"></div>
+        <svg width="360" height="360" viewBox="0 0 360 360" aria-label="Ilustración de una hamburguesa doble con papas fritas">
+          <ellipse cx="180" cy="300" rx="140" ry="18" fill="rgba(43,27,18,0.15)"/>
+          <path d="M70 190h220a10 10 0 0 1 10 10v6c0 24-20 44-44 44H104c-24 0-44-20-44-44v-6a10 10 0 0 1 10-10z" fill="#F2A65A"/>
+          <path d="M70 190c0-38 46-64 110-64s110 26 110 64" fill="#D98C3D"/>
+          <path d="M62 172c8-6 20-9 118-9s110 3 118 9c4 3 2 10-4 10H66c-6 0-8-7-4-10z" fill="#F6D186"/>
+          <rect x="66" y="188" width="228" height="14" rx="7" fill="#7CB342"/>
+          <rect x="66" y="204" width="228" height="16" rx="8" fill="#6B3A1E"/>
+          <rect x="66" y="222" width="228" height="14" rx="7" fill="#FFD54F"/>
+          <rect x="66" y="238" width="228" height="16" rx="8" fill="#6B3A1E"/>
+          <rect x="80" y="256" width="200" height="12" rx="6" fill="#E8544A"/>
+          <path d="M70 268h220c6 22-14 34-40 34H110c-26 0-46-12-40-34z" fill="#F6D186"/>
+          <circle cx="120" cy="182" r="3" fill="#F6D186"/>
+          <circle cx="180" cy="178" r="3" fill="#F6D186"/>
+          <circle cx="240" cy="182" r="3" fill="#F6D186"/>
+        </svg>
+        <div class="tarjeta-flotante izquierda">
+          <span class="icono-mini">⭐</span> 4.8 en la app
+        </div>
+        <div class="tarjeta-flotante derecha">
+          <span class="icono-mini">🕒</span> Abierto ahora
+        </div>
+      </div>
+    </div>
+
+    <svg class="ola" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,40 L1440,100 L0,100 Z" fill="var(--crema)"></path>
+    </svg>
+  </section>
+
+  <!-- FRANJA DE CONFIANZA -->
+  <div class="franja-confianza">
+    <div class="envoltura">
+      <div class="item-confianza">✅ Ingredientes 100% frescos del día</div>
+      <div class="item-confianza">🚗 Auto-servicio en todas las sucursales</div>
+      <div class="item-confianza">📱 Puntos por cada compra en la app</div>
+      <div class="item-confianza">🥗 Opciones balanceadas para toda la familia</div>
+    </div>
+  </div>
+
+  <!-- MENÚ DESTACADO -->
+  <section class="franja-menu" id="menu">
+    <div class="envoltura">
+      <div class="encabezado-seccion">
+        <div>
+          <h2>Los favoritos que nunca fallan</h2>
+          <p>Sabores clásicos, hechos al momento, con el sazón que ya conocés.</p>
+        </div>
+        <a href="#" class="ver-todo">Ver menú completo →</a>
+      </div>
+
+      <div class="carril-menu">
+        <article class="tarjeta-menu">
+          <div class="medallon-menu fondo-1">
+            <svg width="86" height="86" viewBox="0 0 86 86"><circle cx="43" cy="43" r="38" fill="#fff" opacity="0.35"/><path d="M20 46h46a4 4 0 0 1 4 4v2c0 10-8 18-18 18H34c-10 0-18-8-18-18v-2a4 4 0 0 1 4-4z" fill="#F2A65A"/><rect x="18" y="40" width="50" height="8" rx="4" fill="#6B3A1E"/><path d="M16 38c2-10 12-16 27-16s25 6 27 16c1 4-2 7-6 7H22c-4 0-7-3-6-7z" fill="#F6D186"/></svg>
+          </div>
+          <h3>Big Mac®</h3>
+          <p class="desc">Dos carnes, salsa especial, lechuga, queso y pepinillos en pan con ajonjolí.</p>
+          <div class="fila-precio">
+            <span class="precio">$4.75</span>
+            <button class="anadir" aria-label="Añadir Big Mac al pedido">+</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-menu">
+          <span class="etiqueta-picante">Picante</span>
+          <div class="medallon-menu fondo-2">
+            <svg width="86" height="86" viewBox="0 0 86 86"><circle cx="43" cy="43" r="38" fill="#fff" opacity="0.3"/><rect x="24" y="26" width="38" height="34" rx="8" fill="#E8A23A"/><rect x="20" y="34" width="46" height="10" rx="5" fill="#C1272D"/><rect x="28" y="50" width="30" height="8" rx="4" fill="#7CB342"/></svg>
+          </div>
+          <h3>McPollo Especial</h3>
+          <p class="desc">Filete de pollo crujiente bañado en salsa picante y vegetales frescos.</p>
+          <div class="fila-precio">
+            <span class="precio">$4.25</span>
+            <button class="anadir" aria-label="Añadir McPollo Especial al pedido">+</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-menu">
+          <div class="medallon-menu fondo-3">
+            <svg width="86" height="86" viewBox="0 0 86 86"><circle cx="43" cy="43" r="38" fill="#fff" opacity="0.3"/><path d="M30 60l4-30h18l4 30z" fill="#F2C572"/><rect x="27" y="56" width="32" height="10" rx="3" fill="#C1272D"/></svg>
+          </div>
+          <h3>Papas medianas</h3>
+          <p class="desc">Doradas y crujientes por fuera, suaves por dentro. Con o sin sal.</p>
+          <div class="fila-precio">
+            <span class="precio">$2.10</span>
+            <button class="anadir" aria-label="Añadir papas medianas al pedido">+</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-menu">
+          <div class="medallon-menu fondo-4">
+            <svg width="86" height="86" viewBox="0 0 86 86"><circle cx="43" cy="43" r="38" fill="#fff" opacity="0.3"/><path d="M32 20h22l-2 34a9 9 0 0 1-9 8h0a9 9 0 0 1-9-8z" fill="#fff"/><rect x="30" y="16" width="26" height="8" rx="4" fill="#C1272D"/></svg>
+          </div>
+          <h3>Cajita Feliz®</h3>
+          <p class="desc">La combinación favorita de los más pequeños, con sorpresa incluida.</p>
+          <div class="fila-precio">
+            <span class="precio">$3.60</span>
+            <button class="anadir" aria-label="Añadir Cajita Feliz al pedido">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOCIÓN / APP -->
+  <section class="promo" id="app">
+    <div class="envoltura promo-grid">
+      <div>
+        <h2>Pedí desde tu celular y ganá cada vez</h2>
+        <p>La app de McDonald's El Salvador te guarda tus combos favoritos, te avisa de promociones exclusivas y acumula puntos que podés cambiar por comida gratis.</p>
+        <ul class="lista-app">
+          <li><span class="marca-verifica">✓</span> Cupones nuevos cada semana, solo para la app</li>
+          <li><span class="marca-verifica">✓</span> Guarda tu método de pago y repite tu orden en un toque</li>
+          <li><span class="marca-verifica">✓</span> Seguimiento en tiempo real de tu entrega</li>
+        </ul>
+        <div class="botones-tienda">
+          <a href="#" class="boton boton-oscuro" style="background:#fff;color:var(--cafe);">📲 App Store</a>
+          <a href="#" class="boton boton-oscuro" style="background:#fff;color:var(--cafe);">▶ Google Play</a>
+        </div>
+      </div>
+
+      <div class="telefono-mock">
+        <div class="pantalla-app">
+          <div class="barra-app">
+            <div class="m-mini"></div>
+            <span>Mis promociones</span>
+          </div>
+          <div class="tarjeta-cupon">
+            <div class="franja"></div>
+            <div class="franja corta"></div>
+          </div>
+          <div class="tarjeta-cupon">
+            <div class="franja"></div>
+            <div class="franja corta"></div>
+          </div>
+          <div class="tarjeta-cupon">
+            <div class="franja"></div>
+            <div class="franja corta"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA LA ENTREGA -->
+  <section class="franja-entrega" id="promos">
+    <div class="envoltura">
+      <div class="encabezado-seccion">
+        <div>
+          <h2>Recíbelo como prefieras</h2>
+          <p>Tres formas simples de disfrutar tu pedido, sin filas ni complicaciones.</p>
+        </div>
+      </div>
+      <div class="pasos-entrega">
+        <div class="paso">
+          <div class="icono-paso">🚗</div>
+          <h3>Auto-servicio</h3>
+          <p>Ordena desde el carro y recógelo en la ventanilla sin bajarte, disponible en todas las sucursales.</p>
+        </div>
+        <div class="paso">
+          <div class="icono-paso">🛍️</div>
+          <h3>Recoger en tienda</h3>
+          <p>Haz tu pedido desde la app y pasa directo al mostrador de pedidos digitales, sin esperar en fila.</p>
+        </div>
+        <div class="paso">
+          <div class="icono-paso">🛵</div>
+          <h3>Entrega a domicilio</h3>
+          <p>Pide desde la app o tu plataforma de delivery favorita y síguelo en tiempo real hasta tu puerta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIOS DE ENTREGA -->
+  <section class="socios" id="restaurantes">
+    <div class="envoltura">
+      <div class="franja-socios">
+        <div class="texto-socios">
+          <h3>Disponible en tus apps de delivery favoritas</h3>
+          <p>Encuéntranos también en las plataformas con las que ya estás familiarizado.</p>
+        </div>
+        <div class="logos-socios">
+          <span class="chip-socio">PedidosYa</span>
+          <span class="chip-socio">Rappi</span>
+          <span class="chip-socio">Hugo App</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="trabaja">
+  <div class="envoltura">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <a href="#inicio" class="logo">
+          <svg width="30" height="30" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#D8261D"/><path d="M8 25V11.5C8 10.5 8.7 10 9.4 10C9.9 10 10.4 10.3 10.7 10.9L14.3 18.5C14.5 19 15 19 15.2 18.5L18.8 10.9C19.1 10.3 19.6 10 20.1 10C20.8 10 21.5 10.5 21.5 11.5V25" stroke="#FFC629" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 25V13.5C24 12.4 24.9 11.7 25.8 12.1C26.2 12.3 26.5 12.7 26.5 13.2V25" stroke="#FFC629" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+          <span>McDonald's <strong>SV</strong></span>
+        </a>
+        <p>Sirviendo a las familias salvadoreñas desde hace más de tres décadas, con calidad y sabor consistentes en cada sucursal del país.</p>
+        <div class="redes">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div class="col-pie">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="#">Combos</a></li>
+          <li><a href="#">McCafé</a></li>
+          <li><a href="#">Cajita Feliz</a></li>
+          <li><a href="#">Postres</a></li>
+        </ul>
+      </div>
+      <div class="col-pie">
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Sostenibilidad</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-pie">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos de uso</a></li>
+          <li><a href="#">Encuentra tu restaurante</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-inferior">
+      <span>© 2026 McDonald's El Salvador. Todos los derechos reservados.</span>
+      <span>Sitio conceptual de rediseño — no oficial.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

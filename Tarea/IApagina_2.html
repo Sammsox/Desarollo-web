@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McDonald's El Salvador | Pide tu antojo, a tu manera</title>
+<meta name="description" content="Pide McDelivery o Pick Up en AutoMac. Menú completo, promociones exclusivas y MiMcDonald's App con puntos por cada compra.">
+<link href="IApagina_2.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-ink antialiased">
+
+<!-- ===================== TOP BAR ===================== -->
+<div class="bg-ink text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 h-10">
+    <p class="flex items-center gap-2 truncate">
+      <i class="fa-solid fa-bolt text-mcyellow"></i>
+      <span class="truncate">Hoy: 2x1 en McFlurry Oreo después de las 8pm</span>
+    </p>
+    <div class="hidden sm:flex items-center gap-5 shrink-0">
+      <div class="flex items-center bg-white/10 rounded-full p-1">
+        <button data-mode="delivery" class="mode-btn px-3 py-1 rounded-full text-xs font-semibold transition bg-mcyellow text-ink">
+          <i class="fa-solid fa-motorcycle mr-1"></i>McDelivery
+        </button>
+        <button data-mode="pickup" class="mode-btn px-3 py-1 rounded-full text-xs font-semibold transition text-white/80">
+          <i class="fa-solid fa-car mr-1"></i>AutoMac
+        </button>
+      </div>
+      <a href="#restaurantes" class="text-white/80 hover:text-mcyellow transition">
+        <i class="fa-solid fa-location-dot mr-1"></i>Restaurantes
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ink/5">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 shrink-0 focus-ring rounded-lg">
+      <span class="relative w-10 h-10 grid place-items-center">
+        <span class="absolute inset-0 rounded-full bg-mcred"></span>
+        <i class="fa-solid fa-m text-mcyellow text-2xl relative"></i>
+      </span>
+      <span class="font-display font-extrabold text-lg leading-none">
+        McDonald's<span class="block text-[11px] font-semibold text-mcred tracking-wide">EL SALVADOR</span>
+      </span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 font-medium text-sm">
+      <li><a href="#menu" class="hover:text-mcred transition">Menú</a></li>
+      <li><a href="#ofertas" class="hover:text-mcred transition">Promociones</a></li>
+      <li><a href="#mccafe" class="hover:text-mcred transition">McCafé</a></li>
+      <li><a href="#mimcdonalds" class="hover:text-mcred transition">MiMcDonald's</a></li>
+      <li><a href="#restaurantes" class="hover:text-mcred transition">Ubicaciones</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="#menu" class="hidden sm:inline-flex items-center gap-2 bg-mcred hover:bg-mcreddark text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-pop transition focus-ring">
+        Pide Aquí <i class="fa-solid fa-arrow-right-long text-xs"></i>
+      </a>
+      <button id="menuToggle" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden w-10 h-10 grid place-items-center rounded-full hover:bg-cloud transition focus-ring">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-ink/5 bg-white">
+    <ul class="px-4 py-3 space-y-1 font-medium">
+      <li><a href="#menu" class="block px-3 py-2.5 rounded-xl hover:bg-cloud">Menú</a></li>
+      <li><a href="#ofertas" class="block px-3 py-2.5 rounded-xl hover:bg-cloud">Promociones</a></li>
+      <li><a href="#mccafe" class="block px-3 py-2.5 rounded-xl hover:bg-cloud">McCafé</a></li>
+      <li><a href="#mimcdonalds" class="block px-3 py-2.5 rounded-xl hover:bg-cloud">MiMcDonald's</a></li>
+      <li><a href="#restaurantes" class="block px-3 py-2.5 rounded-xl hover:bg-cloud">Ubicaciones</a></li>
+      <li class="pt-2">
+        <a href="#menu" class="flex items-center justify-center gap-2 bg-mcred text-white font-semibold px-5 py-3 rounded-full">
+          Pide Aquí <i class="fa-solid fa-arrow-right-long text-xs"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="relative overflow-hidden bg-cloud">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-10 items-center">
+    <!-- Copy -->
+    <div class="relative z-10 text-center lg:text-left">
+      <span class="inline-flex items-center gap-2 bg-white border border-ink/10 rounded-full px-4 py-1.5 text-xs font-semibold text-mcred shadow-soft mb-5">
+        <i class="fa-solid fa-fire"></i> Antojo detectado en San Salvador
+      </span>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl leading-[1.05] text-ink">
+        El sabor que ya conocés,<br class="hidden sm:block"> en el momento que se te antoja
+      </h1>
+      <p class="mt-5 text-lg text-ink/70 max-w-lg mx-auto lg:mx-0">
+        Pedí desde donde estés: entrega a domicilio con McDelivery o retiro sin bajarte del carro en AutoMac. Listo en minutos.
+      </p>
+
+      <!-- Direccion rapida -->
+      <div class="mt-8 bg-white rounded-2xl shadow-soft p-2 flex flex-col sm:flex-row gap-2 max-w-xl mx-auto lg:mx-0">
+        <label for="direccion" class="sr-only">Dirección de entrega</label>
+        <div class="flex items-center gap-3 flex-1 px-3 py-2.5">
+          <i class="fa-solid fa-location-dot text-mcred"></i>
+          <input id="direccion" type="text" placeholder="¿A dónde te lo llevamos? Ej. Col. Escalón, San Salvador"
+            class="w-full outline-none text-sm placeholder:text-ink/40 bg-transparent">
+        </div>
+        <button class="bg-mcyellow hover:bg-mcyellowdark text-ink font-bold text-sm px-6 py-3 rounded-xl transition focus-ring whitespace-nowrap">
+          Buscar restaurantes
+        </button>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+        <a href="#menu" class="inline-flex items-center gap-2 bg-ink hover:bg-black text-white font-semibold px-6 py-3.5 rounded-full transition focus-ring">
+          Explorar Menú Completo <i class="fa-solid fa-arrow-right-long text-xs"></i>
+        </a>
+        <p class="text-sm text-ink/60 flex items-center gap-2">
+          <i class="fa-solid fa-star text-mcyellow"></i> +2,000 canjes de puntos hoy
+        </p>
+      </div>
+    </div>
+
+    <!-- Imagen producto estrella -->
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="hero-burst absolute w-[420px] h-[420px] sm:w-[520px] sm:h-[520px] rounded-full -z-0"></div>
+      <img
+        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop"
+        alt="Hamburguesa Big Mac con doble carne, queso y vegetales frescos"
+        class="relative z-10 w-[280px] sm:w-[380px] lg:w-[440px] drop-shadow-2xl rounded-3xl object-cover aspect-square"
+        loading="eager">
+      <div class="absolute z-20 bottom-4 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 bg-white rounded-2xl shadow-soft px-4 py-3 flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full bg-mcred/10 text-mcred grid place-items-center">
+          <i class="fa-solid fa-stopwatch"></i>
+        </span>
+        <div class="leading-tight">
+          <p class="text-sm font-bold">Combo Big Mac</p>
+          <p class="text-xs text-ink/60">Listo en ~12 min</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATEGORÍAS RÁPIDAS ===================== -->
+<section id="menu" class="py-10 border-b border-ink/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-5">
+      <h2 class="font-display font-bold text-2xl">¿Qué se te antoja hoy?</h2>
+      <a href="#" class="hidden sm:inline text-sm font-semibold text-mcred hover:underline">Ver menú completo</a>
+    </div>
+
+    <div id="catRail" class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+      <button data-cat="hamburguesas" class="cat-btn tab-active flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 transition focus-ring">
+        <i class="fa-solid fa-burger"></i> Hamburguesas
+      </button>
+      <button data-cat="pollo" class="cat-btn tab-inactive flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 border border-ink/10 transition focus-ring">
+        <i class="fa-solid fa-drumstick-bite"></i> Pollo
+      </button>
+      <button data-cat="mccafe" class="cat-btn tab-inactive flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 border border-ink/10 transition focus-ring">
+        <i class="fa-solid fa-mug-saucer"></i> McCafé
+      </button>
+      <button data-cat="postres" class="cat-btn tab-inactive flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 border border-ink/10 transition focus-ring">
+        <i class="fa-solid fa-ice-cream"></i> Postres
+      </button>
+      <button data-cat="cajita" class="cat-btn tab-inactive flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 border border-ink/10 transition focus-ring">
+        <i class="fa-solid fa-box-open"></i> Cajita Feliz
+      </button>
+      <button data-cat="desayunos" class="cat-btn tab-inactive flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm shrink-0 border border-ink/10 transition focus-ring">
+        <i class="fa-solid fa-egg"></i> Desayunos
+      </button>
+    </div>
+
+    <!-- Paneles por categoria -->
+    <div class="mt-8">
+      <div data-panel="hamburguesas" class="active grid sm:grid-cols-3 gap-5">
+        <article class="group bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=800&auto=format&fit=crop" alt="Big Mac" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold">Big Mac</h3>
+            <p class="text-sm text-ink/60 mt-1">Doble carne, salsa especial y queso.</p>
+            <p class="mt-3 font-bold text-mcred">$5.75</p>
+          </div>
+        </article>
+        <article class="group bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop" alt="Cuarto de Libra con Queso" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold">Cuarto de Libra c/Queso</h3>
+            <p class="text-sm text-ink/60 mt-1">Carne 100% res a la plancha.</p>
+            <p class="mt-3 font-bold text-mcred">$4.95</p>
+          </div>
+        </article>
+        <article class="group bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=800&auto=format&fit=crop" alt="McDouble" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold">McDouble</h3>
+            <p class="text-sm text-ink/60 mt-1">Doble carne, sencilla y deliciosa.</p>
+            <p class="mt-3 font-bold text-mcred">$3.50</p>
+          </div>
+        </article>
+      </div>
+
+      <div data-panel="pollo" class="grid sm:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=800&auto=format&fit=crop" alt="McCrispy" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">McCrispy</h3><p class="text-sm text-ink/60 mt-1">Pechuga crujiente y jugosa.</p><p class="mt-3 font-bold text-mcred">$5.25</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?q=80&w=800&auto=format&fit=crop" alt="McNuggets" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">McNuggets 10 pz</h3><p class="text-sm text-ink/60 mt-1">Con tu salsa favorita.</p><p class="mt-3 font-bold text-mcred">$4.50</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?q=80&w=800&auto=format&fit=crop" alt="Alitas BBQ" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Alitas BBQ</h3><p class="text-sm text-ink/60 mt-1">Bañadas en salsa ahumada.</p><p class="mt-3 font-bold text-mcred">$6.10</p></div>
+        </article>
+      </div>
+
+      <div data-panel="mccafe" class="grid sm:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="Capuchino" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Capuchino</h3><p class="text-sm text-ink/60 mt-1">Café 100% arábica.</p><p class="mt-3 font-bold text-mcred">$2.10</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=800&auto=format&fit=crop" alt="Frappe" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Frappé Moka</h3><p class="text-sm text-ink/60 mt-1">Frío, cremoso e intenso.</p><p class="mt-3 font-bold text-mcred">$2.75</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Latte" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Latte Vainilla</h3><p class="text-sm text-ink/60 mt-1">Suave y aromático.</p><p class="mt-3 font-bold text-mcred">$2.35</p></div>
+        </article>
+      </div>
+
+      <div data-panel="postres" class="grid sm:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?q=80&w=800&auto=format&fit=crop" alt="McFlurry Oreo" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">McFlurry Oreo</h3><p class="text-sm text-ink/60 mt-1">Cremoso con trocitos crocantes.</p><p class="mt-3 font-bold text-mcred">$2.20</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=800&auto=format&fit=crop" alt="Cono de vainilla" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Cono Vainilla</h3><p class="text-sm text-ink/60 mt-1">El clásico de siempre.</p><p class="mt-3 font-bold text-mcred">$0.90</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1541599468348-e96984315921?q=80&w=800&auto=format&fit=crop" alt="Pay de manzana" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Pay de Manzana</h3><p class="text-sm text-ink/60 mt-1">Caliente y crujiente.</p><p class="mt-3 font-bold text-mcred">$1.30</p></div>
+        </article>
+      </div>
+
+      <div data-panel="cajita" class="grid sm:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1619881589634-2e5b7a5f9e5b?q=80&w=800&auto=format&fit=crop" alt="Cajita Feliz Hamburguesa" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Cajita Feliz Hamburguesa</h3><p class="text-sm text-ink/60 mt-1">Con papas, bebida y sorpresa.</p><p class="mt-3 font-bold text-mcred">$3.95</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800&auto=format&fit=crop" alt="Cajita Feliz Nuggets" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Cajita Feliz Nuggets</h3><p class="text-sm text-ink/60 mt-1">4 piezas, papas y bebida.</p><p class="mt-3 font-bold text-mcred">$3.95</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?q=80&w=800&auto=format&fit=crop" alt="Juguete Cajita Feliz" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Edición Coleccionable</h3><p class="text-sm text-ink/60 mt-1">Juguete sorpresa de temporada.</p><p class="mt-3 font-bold text-mcred">Incluido</p></div>
+        </article>
+      </div>
+
+      <div data-panel="desayunos" class="grid sm:grid-cols-3 gap-5">
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?q=80&w=800&auto=format&fit=crop" alt="McMuffin" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">McMuffin de Huevo</h3><p class="text-sm text-ink/60 mt-1">Huevo, queso y jamón.</p><p class="mt-3 font-bold text-mcred">$2.85</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop" alt="Hotcakes" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Hotcakes</h3><p class="text-sm text-ink/60 mt-1">Con mantequilla y miel.</p><p class="mt-3 font-bold text-mcred">$3.10</p></div>
+        </article>
+        <article class="bg-white rounded-2xl border border-ink/5 shadow-soft overflow-hidden hover:-translate-y-1 transition">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop" alt="Burrito de desayuno" class="w-full h-40 object-cover">
+          <div class="p-4"><h3 class="font-bold">Burrito Desayuno</h3><p class="text-sm text-ink/60 mt-1">Huevo, papas y salsa.</p><p class="mt-3 font-bold text-mcred">$2.40</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFERTAS / CUPONES ===================== -->
+<section id="ofertas" class="py-16 bg-cloud">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-xl mx-auto mb-10">
+      <h2 class="font-display font-bold text-3xl">Cupones exclusivos de hoy</h2>
+      <p class="mt-2 text-ink/60">Desbloqueá precios especiales canjeables solo desde la app.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="ticket relative bg-white rounded-2xl shadow-soft overflow-hidden">
+        <div class="p-6">
+          <span class="inline-block bg-mcred/10 text-mcred text-xs font-bold px-3 py-1 rounded-full mb-3">Combo del día</span>
+          <h3 class="font-display font-bold text-xl">2 Big Mac por $8.99</h3>
+          <p class="text-sm text-ink/60 mt-1">Válido de lunes a jueves, todo el día.</p>
+        </div>
+        <div class="border-t-2 border-dashed border-ink/10 mx-6"></div>
+        <div class="p-6 pt-4 flex items-center justify-between">
+          <span class="text-xs text-ink/50">Vence hoy 11:59pm</span>
+          <button class="bg-ink text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-black transition focus-ring">
+            Canjear en la App
+          </button>
+        </div>
+      </div>
+
+      <div class="ticket relative bg-white rounded-2xl shadow-soft overflow-hidden">
+        <div class="p-6">
+          <span class="inline-block bg-mcyellow/20 text-mcreddark text-xs font-bold px-3 py-1 rounded-full mb-3">McCafé</span>
+          <h3 class="font-display font-bold text-xl">Café gratis con Cajita Feliz</h3>
+          <p class="text-sm text-ink/60 mt-1">En tu primer pedido por McDelivery.</p>
+        </div>
+        <div class="border-t-2 border-dashed border-ink/10 mx-6"></div>
+        <div class="p-6 pt-4 flex items-center justify-between">
+          <span class="text-xs text-ink/50">Solo nuevos usuarios</span>
+          <button class="bg-ink text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-black transition focus-ring">
+            Canjear en la App
+          </button>
+        </div>
+      </div>
+
+      <div class="ticket relative bg-white rounded-2xl shadow-soft overflow-hidden">
+        <div class="p-6">
+          <span class="inline-block bg-mcred/10 text-mcred text-xs font-bold px-3 py-1 rounded-full mb-3">AutoMac</span>
+          <h3 class="font-display font-bold text-xl">20% en tu Cuarto de Libra</h3>
+          <p class="text-sm text-ink/60 mt-1">Retirando en cualquier AutoMac del país.</p>
+        </div>
+        <div class="border-t-2 border-dashed border-ink/10 mx-6"></div>
+        <div class="p-6 pt-4 flex items-center justify-between">
+          <span class="text-xs text-ink/50">Vence en 3 días</span>
+          <button class="bg-ink text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-black transition focus-ring">
+            Canjear en la App
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MIMCDONALD'S APP ===================== -->
+<section id="mimcdonalds" class="relative py-16 sm:py-20 bg-ink text-white overflow-hidden">
+  <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-mcred/30 blur-3xl"></div>
+  <div class="absolute -left-24 -bottom-24 w-96 h-96 rounded-full bg-mcyellow/20 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-xs font-semibold text-mcyellow mb-5">
+        <i class="fa-solid fa-crown"></i> Programa de lealtad
+      </span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl leading-tight">
+        Cada compra suma puntos en MiMcDonald's
+      </h2>
+      <p class="mt-4 text-white/70 max-w-md">
+        Acumulá puntos automáticamente en cada pedido y canjealos por tus productos favoritos. Sin filas, sin papeleo: todo desde tu celular.
+      </p>
+
+      <div class="mt-8 grid grid-cols-3 gap-4 max-w-md">
+        <div class="bg-white/5 rounded-2xl p-4 text-center">
+          <p class="font-display font-extrabold text-2xl text-mcyellow">1pt</p>
+          <p class="text-xs text-white/60 mt-1">por cada $1 gastado</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-4 text-center">
+          <p class="font-display font-extrabold text-2xl text-mcyellow">50%</p>
+          <p class="text-xs text-white/60 mt-1">off en tu cumpleaños</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-4 text-center">
+          <p class="font-display font-extrabold text-2xl text-mcyellow">24/7</p>
+          <p class="text-xs text-white/60 mt-1">ofertas personalizadas</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#" class="inline-flex items-center gap-3 bg-white text-ink px-5 py-3 rounded-2xl hover:bg-mcyellow transition focus-ring">
+          <i class="fa-brands fa-apple text-2xl"></i>
+          <span class="text-left leading-tight">
+            <span class="block text-[10px] text-ink/60">Descargar en</span>
+            <span class="block text-sm font-bold">App Store</span>
+          </span>
+        </a>
+        <a href="#" class="inline-flex items-center gap-3 bg-white text-ink px-5 py-3 rounded-2xl hover:bg-mcyellow transition focus-ring">
+          <i class="fa-brands fa-google-play text-xl"></i>
+          <span class="text-left leading-tight">
+            <span class="block text-[10px] text-ink/60">Disponible en</span>
+            <span class="block text-sm font-bold">Google Play</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative flex justify-center">
+      <div class="w-64 sm:w-72 rounded-[2.5rem] border-8 border-white/10 bg-gradient-to-b from-mcred to-mcreddark shadow-2xl p-5 aspect-[9/19]">
+        <div class="bg-white/10 rounded-2xl h-full flex flex-col items-center justify-center gap-3 text-center px-4">
+          <i class="fa-solid fa-star text-mcyellow text-4xl"></i>
+          <p class="font-display font-bold text-lg">1,240 puntos</p>
+          <p class="text-xs text-white/70">Te faltan 260 pts para un Big Mac gratis</p>
+          <div class="w-full h-2 rounded-full bg-white/20 mt-2 overflow-hidden">
+            <div class="h-full bg-mcyellow rounded-full" style="width:82%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESTAURANTES CTA ===================== -->
+<section id="restaurantes" class="py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-mcyellow rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-6 text-ink">
+      <div class="text-center lg:text-left">
+        <h2 class="font-display font-bold text-2xl sm:text-3xl">¿Preferís ir directo al restaurante?</h2>
+        <p class="mt-2 text-ink/70">Encontrá el McDonald's más cercano en San Salvador, Santa Ana, San Miguel y más.</p>
+      </div>
+      <a href="#" class="shrink-0 inline-flex items-center gap-2 bg-ink text-white font-semibold px-6 py-3.5 rounded-full hover:bg-black transition focus-ring">
+        <i class="fa-solid fa-map-location-dot"></i> Ver ubicaciones
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-ink text-white/80 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-white/10">
+
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="relative w-9 h-9 grid place-items-center">
+            <span class="absolute inset-0 rounded-full bg-mcred"></span>
+            <i class="fa-solid fa-m text-mcyellow text-xl relative"></i>
+          </span>
+          <span class="font-display font-extrabold text-white">McDonald's El Salvador</span>
+        </div>
+        <p class="text-sm text-white/60 max-w-sm">Operado por Arcos Dorados, el franquiciante más grande de McDonald's en Latinoamérica y el Caribe.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-mcred transition focus-ring"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-mcred transition focus-ring"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-mcred transition focus-ring"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="X" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-mcred transition focus-ring"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm">McDelivery</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li class="flex justify-between gap-4"><span>Lun – Jue</span><span>10:00am – 10:00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Vie – Sáb</span><span>10:00am – 12:00am</span></li>
+          <li class="flex justify-between gap-4"><span>Domingo</span><span>10:00am – 10:00pm</span></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Rastrear mi pedido</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm">Facturación</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-mcyellow transition">Factura Electrónica (DTE)</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Consultar comprobantes</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Datos para facturar</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Soporte de facturación</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm">Corporativo</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-mcyellow transition">Trabajá con nosotros</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Sobre Arcos Dorados</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Sostenibilidad</a></li>
+          <li><a href="#" class="hover:text-mcyellow transition">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <p>&copy; 2026 Arcos Dorados El Salvador, S.A. de C.V. Todos los derechos reservados.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+        <a href="#" class="hover:text-mcyellow transition">Términos y condiciones</a>
+        <a href="#" class="hover:text-mcyellow transition">Política de privacidad</a>
+        <a href="#" class="hover:text-mcyellow transition">Aviso de cookies</a>
+        <a href="#" class="hover:text-mcyellow transition">Libro de reclamaciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    menuToggle.querySelector('i').className = isOpen ? 'fa-solid fa-bars text-lg' : 'fa-solid fa-xmark text-lg';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.querySelector('i').className = 'fa-solid fa-bars text-lg';
+    });
+  });
+
+  // Top bar delivery / pickup mode switch
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.remove('bg-mcyellow', 'text-ink');
+        b.classList.add('text-white/80');
+      });
+      btn.classList.add('bg-mcyellow', 'text-ink');
+      btn.classList.remove('text-white/80');
+    });
+  });
+
+  // Category filter tabs
+  const catButtons = document.querySelectorAll('.cat-btn');
+  const panels = document.querySelectorAll('[data-panel]');
+  catButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.cat;
+
+      catButtons.forEach(b => {
+        b.classList.remove('tab-active');
+        b.classList.add('tab-inactive', 'border', 'border-ink/10');
+      });
+      btn.classList.add('tab-active');
+      btn.classList.remove('tab-inactive', 'border', 'border-ink/10');
+
+      panels.forEach(p => p.classList.toggle('active', p.dataset.panel === target));
+    });
+  });
+</script>
+
+</body>
+</html>

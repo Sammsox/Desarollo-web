@@ -1,0 +1,406 @@
+/* =========================================
+   VARIABLES
+   ========================================= */
+
+:root {
+  --mcred: #DA291C;
+  --mcreddark: #B32117;
+  --mcyellow: #FFC72C;
+  --mcyellowdark: #E8B000;
+  --ink: #27251F;
+  --cloud: #F8F9FA;
+
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+
+  --shadow-soft: 0 10px 30px -10px rgba(39, 37, 31, 0.15);
+  --shadow-pop: 0 14px 34px -8px rgba(218, 41, 28, 0.35);
+}
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   SELECCIÓN DE TEXTO
+   ========================================= */
+
+::selection {
+  background: var(--mcyellow);
+  color: var(--ink);
+}
+
+
+/* =========================================
+   FUENTES
+   ========================================= */
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* =========================================
+   COLORES
+   ========================================= */
+
+.bg-mcred {
+  background-color: var(--mcred);
+}
+
+.bg-mcreddark {
+  background-color: var(--mcreddark);
+}
+
+.bg-mcyellow {
+  background-color: var(--mcyellow);
+}
+
+.bg-mcyellowdark {
+  background-color: var(--mcyellowdark);
+}
+
+.bg-ink {
+  background-color: var(--ink);
+}
+
+.bg-cloud {
+  background-color: var(--cloud);
+}
+
+.text-mcred {
+  color: var(--mcred);
+}
+
+.text-mcreddark {
+  color: var(--mcreddark);
+}
+
+.text-mcyellow {
+  color: var(--mcyellow);
+}
+
+.text-mcyellowdark {
+  color: var(--mcyellowdark);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+
+.text-cloud {
+  color: var(--cloud);
+}
+
+
+/* =========================================
+   BORDES REDONDEADOS
+   ========================================= */
+
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+
+.rounded-3xl {
+  border-radius: var(--radius-3xl);
+}
+
+
+/* =========================================
+   SOMBRAS
+   ========================================= */
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-pop {
+  box-shadow: var(--shadow-pop);
+}
+
+
+/* =========================================
+   OCULTAR SCROLLBAR
+   ========================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* =========================================
+   CUPÓN / TICKET
+   ========================================= */
+
+.ticket {
+  position: relative;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: var(--cloud);
+  border-radius: 999px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -11px;
+}
+
+.ticket::after {
+  right: -11px;
+}
+
+
+/* =========================================
+   TABS
+   ========================================= */
+
+.tab-active {
+  background: var(--ink);
+  color: var(--mcyellow);
+}
+
+.tab-inactive {
+  background: #FFFFFF;
+  color: var(--ink);
+}
+
+
+/* =========================================
+   PANELES
+   ========================================= */
+
+[data-panel] {
+  display: none;
+}
+
+[data-panel].active {
+  display: block;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero-burst {
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--mcyellow) 0%,
+    var(--mcyellow) 42%,
+    rgba(255, 199, 44, 0) 70%
+  );
+}
+
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--mcred);
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   TRANSICIONES
+   ========================================= */
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* =========================================
+   UTILIDADES BÁSICAS
+   ========================================= */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.btn-red {
+  background-color: var(--mcred);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-2xl);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.btn-red:hover {
+  background-color: var(--mcreddark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-pop);
+}
+
+.btn-yellow {
+  background-color: var(--mcyellow);
+  color: var(--ink);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-2xl);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.btn-yellow:hover {
+  background-color: var(--mcyellowdark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease;
+}
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+}

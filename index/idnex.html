@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Guias de Web</title>
+    <title>Mis Guías de Web</title>
+    <!-- Fuente moderna desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <ul>
-        <li><a href="tarea/estilos_embebidos.html">Estilos Embebidos</a></li>
-        <li><a href="tarea/ejemplo2.html">Ejemplo 2</a></li>
-        <li><a href="tarea/paises.html">Países</a></li>
-        <li><a href="tarea/Serie.html">Serie</a></li>
-        <li><a href="tarea/IaPagina_1.html">IA Página</a></li>
-        <li><a href="tarea/IApagina_2.html">IA Página 2</a></li>
-    </ul>
+    <div class="container">
+        <header>
+            <span class="badge">Portafolio Web</span>
+            <h1>Mis Guías de Web</h1>
+            <p class="subtitle">Colección de prácticas, ejercicios y entregas del curso.</p>
+        </header>
 
-    <section>
-        <H2>Este es mi video de youtube para que lo puedan ver</H2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jBcYPT4WdD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
+        <main>
+            <!-- Lista de Guías en Grid de Tarjetas -->
+            <ul class="nav-grid">
+                <li><a href="tarea/estilos_embebidos.html">Estilos Embebidos</a></li>
+                <li><a href="tarea/ejemplo2.html">Ejemplo 2</a></li>
+                <li><a href="tarea/paises.html">Países</a></li>
+                <li><a href="tarea/Serie.html">Serie</a></li>
+                <li><a href="tarea/IaPagina_1.html">IA Página</a></li>
+                <li><a href="tarea/IApagina_2.html">IA Página 2</a></li>
+            </ul>
 
+            <!-- Sección Multimedia -->
+            <section class="video-card">
+                <h2>Demostración en Video</h2>
+                <p>Reproduce el video interactivo a continuación:</p>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/jBcYPT4WdD8" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 • Entrega de Guías y Proyectos Web</p>
+        </footer>
+    </div>
 </body>
 </html>

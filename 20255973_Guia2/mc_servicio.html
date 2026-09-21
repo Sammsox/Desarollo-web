@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canales de Servicio | McDonald's El Salvador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Tarea/IApagina_2.css">
+</head>
+<body class="bg-white text-ink antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="IApagina_2.html" class="flex items-center gap-2 shrink-0">
+        <span class="relative w-10 h-10 grid place-items-center">
+          <span class="absolute inset-0 rounded-full bg-mcred"></span>
+          <i class="fa-solid fa-m text-mcyellow text-2xl relative"></i>
+        </span>
+        <span class="font-display font-extrabold text-lg leading-none">
+          McDonald's<span class="block text-[11px] font-semibold text-mcred tracking-wide">EL SALVADOR</span>
+        </span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-8 font-medium text-sm">
+        <li><a href="../Tarea/IApagina_2.html" class="hover:text-mcred transition">Inicio</a></li>
+        <li><a href="mc_servicios.html" class="text-mcred font-bold">Servicios & AutoMac</a></li>
+        <li><a href="mc_contacto.html" class="hover:text-mcred transition">Contacto & Ubicaciones</a></li>
+    </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="mc_contacto.html" class="bg-mcred hover:bg-mcreddark text-white font-semibold text-sm px-5 py-2.5 rounded-full transition">
+          Pedir Ahora
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="inline-block bg-mcyellow text-ink text-xs font-bold px-4 py-1.5 rounded-full mb-3">Modalidades de Pedido</span>
+      <h1 class="font-display font-extrabold text-4xl text-ink">Elegí cómo disfrutar tu comida</h1>
+      <p class="mt-3 text-gray-600">Pasa el cursor sobre cada tarjeta para interactuar con los canales de atención.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <article class="service-card bg-white rounded-3xl border border-gray-200 p-8 flex flex-col justify-between shadow-sm cursor-pointer">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-red-100 text-mcred grid place-items-center text-2xl mb-6">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <h2 class="font-display font-bold text-2xl mb-3">McDelivery</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Pedí desde tu casa o trabajo. Seguimiento en tiempo real y entrega directa en tu puerta en minutos.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-mcred">Cobertura San Salvador</span>
+          <span class="text-sm font-bold text-ink">&rarr;</span>
+        </div>
+      </article>
+
+      <article class="service-card bg-white rounded-3xl border border-gray-200 p-8 flex flex-col justify-between shadow-sm cursor-pointer">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-ink grid place-items-center text-2xl mb-6">
+            <i class="fa-solid fa-car"></i>
+          </div>
+          <h2 class="font-display font-bold text-2xl mb-3">AutoMac</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Ordená y retirá sin bajarte de tu auto. Carriles express disponibles en las principales arterias viales.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-mcred">Atención 24 Horas</span>
+          <span class="text-sm font-bold text-ink">&rarr;</span>
+        </div>
+      </article>
+
+      <article class="service-card bg-white rounded-3xl border border-gray-200 p-8 flex flex-col justify-between shadow-sm cursor-pointer">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-gray-100 text-ink grid place-items-center text-2xl mb-6">
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <h2 class="font-display font-bold text-2xl mb-3">McCafé</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Espacios diseñados para relajarte con café de grano premium salvadoreño y repostería artesanal.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-mcred">Wi-Fi y Climatización</span>
+          <span class="text-sm font-bold text-ink">&rarr;</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-ink text-white/70 py-8 text-center text-sm border-t border-gray-800">
+    <p>&copy; 2026 McDonald's El Salvador • Reto IA Guía de Laboratorio 2</p>
+  </footer>
+
+</body>
+</html>

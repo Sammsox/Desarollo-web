@@ -1,0 +1,200 @@
+:root {
+  --bg-principal: #0b0f19;
+  --bg-card: #111827;
+  --color-borde: #1f2937;
+  --color-acento: #38bdf8;
+  --color-acento-hover: #0284c7;
+  --color-texto: #f3f4f6;
+  --color-texto-mutado: #9ca3af;
+  --fuente-principal: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+}
+
+.bio-header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Selector de hijos directo */
+.bio-nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.bio-nav > a {
+  color: var(--color-texto-mutado);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 16px 20px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.bio-nav > a:hover {
+  color: var(--color-acento);
+  border-bottom-color: var(--color-acento);
+}
+
+.header-hero {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.badge-bio {
+  display: inline-block;
+  background-color: rgba(56, 189, 248, 0.1);
+  color: var(--color-acento);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.header-hero h1 {
+  font-size: 2.3rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: var(--color-texto-mutado);
+  font-size: 1rem;
+}
+
+.wrapper-bio {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.seccion-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.seccion-card h2 {
+  font-size: 1.25rem;
+  color: var(--color-texto);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 8px;
+}
+
+.bio-grid {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.avatar-bio {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--color-borde);
+}
+
+.bio-descripcion p {
+  color: var(--color-texto-mutado);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* Pseudo-elemento: primera letra destacada */
+.bio-descripcion > p:first-child::first-letter {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-acento);
+  float: left;
+  line-height: 1;
+  padding-right: 8px;
+}
+
+/* Selector adyacente para tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background-color: var(--bg-principal);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto-mutado);
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.tag + .tag {
+  margin-left: 10px;
+}
+
+/* Pseudo-clases en lista */
+.skills-list {
+  list-style: none;
+}
+
+.skills-list > li {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 0.9rem;
+  color: var(--color-texto-mutado);
+}
+
+.skills-list > li:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.skills-list > li:first-child {
+  border-left: 3px solid var(--color-acento);
+}
+
+/* Selector de atributo exacto */
+.enlaces-contacto a[target="_blank"] {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: #0b0f19;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.enlaces-contacto a[target="_blank"]:hover {
+  background-color: var(--color-acento-hover);
+}
+
+.bio-footer {
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--color-texto-mutado);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--color-borde);
+}

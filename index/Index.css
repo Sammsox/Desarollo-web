@@ -77,6 +77,51 @@ header h1 {
     max-width: 500px;
 }
 
+/* Estructura de Secciones por Guía */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.guide-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.group-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.pill-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--accent);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+}
+
+.pill-tag.muted {
+    background: rgba(148, 163, 184, 0.1);
+    color: var(--text-muted);
+    border-color: var(--card-border);
+}
+
 /* Enlaces / Tarjetas */
 .nav-grid {
     list-style: none;
@@ -92,6 +137,7 @@ header h1 {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: var(--text-main);
     text-decoration: none;
     padding: 18px 24px;
@@ -102,6 +148,7 @@ header h1 {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .nav-grid li a::before {
@@ -133,6 +180,7 @@ header h1 {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 32px;
     border-radius: var(--radius);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
@@ -154,13 +202,12 @@ header h1 {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid var(--card-border);
-    padding: 0;
 }
 
 .video-container iframe {
@@ -169,7 +216,7 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0;
+    border: 0;
 }
 
 /* Footer */
@@ -187,6 +234,10 @@ footer {
     }
     .video-card {
         padding: 20px 16px;
-        margin-top: 20px;
+    }
+    .group-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
     }
 }

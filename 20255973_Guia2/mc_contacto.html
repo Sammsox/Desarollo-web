@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | McDonald's El Salvador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Tarea/IApagina_2.css">
+</head>
+<body class="bg-white text-ink antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="IApagina_2.html" class="flex items-center gap-2 shrink-0">
+        <span class="relative w-10 h-10 grid place-items-center">
+          <span class="absolute inset-0 rounded-full bg-mcred"></span>
+          <i class="fa-solid fa-m text-mcyellow text-2xl relative"></i>
+        </span>
+        <span class="font-display font-extrabold text-lg leading-none">
+          McDonald's<span class="block text-[11px] font-semibold text-mcred tracking-wide">EL SALVADOR</span>
+        </span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-8 font-medium text-sm">
+        <li><a href="../Tarea/IApagina_2.html" class="hover:text-mcred transition">Inicio</a></li>
+        <li><a href="mc_servicio.html" class="text-mcred font-bold">Servicios & AutoMac</a></li>
+        <li><a href="mc_contacto.html" class="hover:text-mcred transition">Contacto & Ubicaciones</a></li>
+    </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="IApagina_2.html" class="bg-mcred hover:bg-mcreddark text-white font-semibold text-sm px-5 py-2.5 rounded-full transition">
+          Ver Menú
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+    <div class="text-center mb-10">
+      <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-ink">Atención al Cliente</h1>
+      <p class="mt-2 text-gray-600">Comunícate con las oficinas centrales o consulta sobre sucursales en El Salvador.</p>
+    </div>
+
+    <form class="bg-cloud rounded-3xl p-8 border border-gray-200 space-y-6" onsubmit="event.preventDefault(); alert('Mensaje enviado');">
+      <div>
+        <label for="nombre" class="block text-sm font-bold mb-2">Nombre completo</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre" class="w-full bg-white rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none focus:border-mcred">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-bold mb-2">Correo electrónico</label>
+        <input type="email" id="email" required placeholder="correo@ejemplo.com" class="w-full bg-white rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none focus:border-mcred">
+      </div>
+
+      <div>
+        <label for="sucursal" class="block text-sm font-bold mb-2">Restaurante de referencia</label>
+        <select id="sucursal" class="w-full bg-white rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none focus:border-mcred">
+          <option>San Salvador - Zona Rosa</option>
+          <option>San Salvador - Los Próceres</option>
+          <option>Santa Tecla - Plaza Merliot</option>
+          <option>Santa Ana - Metrocentro</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mensaje" class="block text-sm font-bold mb-2">Comentarios</label>
+        <textarea id="mensaje" rows="4" required placeholder="Escribe tu consulta..." class="w-full bg-white rounded-xl border border-gray-300 px-4 py-3 text-sm outline-none focus:border-mcred"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-mcred hover:bg-mcreddark text-white font-bold py-3.5 rounded-xl transition">
+        Enviar Mensaje
+      </button>
+    </form>
+  </main>
+
+  <footer class="bg-ink text-white/70 py-8 text-center text-sm border-t border-gray-800">
+    <p>&copy; 2026 McDonald's El Salvador • Reto IA Guía de Laboratorio 2</p>
+  </footer>
+
+</body>
+</html>
+```[cite: 1]

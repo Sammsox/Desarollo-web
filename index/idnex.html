@@ -3,69 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Guías de Web</title>
+    <title>Portafolio Web | Desarrollo Web I</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
+        
+        <!-- ENCABEZADO PRINCIPAL -->
         <header>
-            <span class="badge">Portafolio Web</span>
+            <span class="badge">Portafolio Web • Ciclo 03-2026</span>
             <h1>Mis Guías de Web</h1>
-            <p class="subtitle">Colección de prácticas, ejercicios y entregas del curso.</p>
+            <p class="subtitle">Repositorio de prácticas de laboratorio, maquetación semántica, selectores avanzados y retos con Inteligencia Artificial.</p>
         </header>
 
         <main>
-            <!-- SECCIÓN GUÍA 2 -->
+            <!-- ==========================================
+                 SECCIÓN GUÍA 2 (Entrega Actual)
+                 ========================================== -->
             <section class="guide-group">
                 <div class="group-header">
-                    <span class="pill-tag">Nueva Entrega</span>
-                    <h2>Guía 2: Selectores Avanzados & Modelo de Caja</h2>
+                    <span class="pill-tag current">Entrega Actual</span>
+                    <h2>Guía 2: Selectores Avanzados & Modelo de Cajas</h2>
                 </div>
-                <ul class="nav-grid">
-                    <li><a href="pelicula.html">Película Altamar</a></li>
-                    <li><a href="tablero.html">Tablero de Damas</a></li>
-                    <li><a href="biografia.html">Biografía Semántica</a></li>
-                </ul>
+
+                <div class="cards-grid">
+                    <!-- Ejercicio 1 -->
+                    <a href="pelicula.html" class="card-item featured">
+                        <span class="item-tag">Ejercicio 1</span>
+                        <h3>Película Altamar</h3>
+                        <p class="desc">Maquetación de landing page cinematográfica empleando selectores de hijos (<code>&gt;</code>), adyacentes (<code>+</code>), de atributos y pseudo-elementos (<code>::first-letter</code> y <code>::first-line</code>).</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <!-- Ejercicio 2 -->
+                    <a href="tablero.html" class="card-item featured">
+                        <span class="item-tag">Ejercicio 2</span>
+                        <h3>Tablero de Damas</h3>
+                        <p class="desc">Construcción de un tablero de 64 casillas simétricas sin usar clases CSS, alternando colores claros y oscuros mediante las fórmulas de la pseudo-clase <code>:nth-child()</code>.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <!-- Ejercicio IV Complementario -->
+                    <a href="biografia.html" class="card-item featured">
+                        <span class="item-tag">Complementario IV</span>
+                        <h3>Biografía Semántica</h3>
+                        <p class="desc">Página de presentación personal estructurada con etiquetas semánticas de HTML5, tipografía externa desde Google Fonts y estilos CSS modernos.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <!-- Reto IA: Inicio -->
+                    <a href="Tarea/IApagina_2.html" class="card-item featured">
+                        <span class="item-tag">Reto IA • Página 1</span>
+                        <h3>McDonald's El Salvador</h3>
+                        <p class="desc">Página de inicio corporativa adaptada a un sistema de diseño unificado, con navegación centralizada y catálogo de productos.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <!-- Reto IA: Servicios -->
+                    <a href="Tarea/mc_servicios.html" class="card-item featured">
+                        <span class="item-tag">Reto IA • Página 2</span>
+                        <h3>Canales de Servicio</h3>
+                        <p class="desc">Sección de modalidades de entrega (McDelivery y AutoMac) que incorpora animaciones y transiciones interactivas en tarjetas flotantes.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <!-- Reto IA: Contacto -->
+                    <a href="Tarea/mc_contacto.html" class="card-item featured">
+                        <span class="item-tag">Reto IA • Página 3</span>
+                        <h3>Atención al Cliente</h3>
+                        <p class="desc">Módulo institucional con formulario de contacto, selección de restaurantes en el país y navegación bidireccional conectada.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+                </div>
             </section>
 
-            <!-- SECCIÓN GUÍA 1 -->
+            <!-- ==========================================
+                 SECCIÓN GUÍA 1 (Historial)
+                 ========================================== -->
             <section class="guide-group">
                 <div class="group-header">
-                    <span class="pill-tag muted">Anterior</span>
-                    <h2>Guía 1: Fundamentos & Estilos</h2>
+                    <span class="pill-tag history">Historial</span>
+                    <h2>Guía 1: Fundamentos de HTML & CSS</h2>
                 </div>
-                <ul class="nav-grid">
-                    <li><a href="/Tarea/estilos_embebidos.html">Estilos Embebidos</a></li>
-                    <li><a href="/Tarea/ejemplo2.html">Ejemplo 2</a></li>
-                    <li><a href="/Tarea/paises.html">Países</a></li>
-                    <li><a href="/Tarea/Serie.html">Serie</a></li>
-                    <li><a href="/Tarea/IaPagina_1.html">IA Página 1</a></li>
-                    <li><a href="/Tarea/IApagina_2.html">IA Página 2</a></li>
-                </ul>
+
+                <div class="cards-grid">
+                    <a href="/Tarea/estilos_embebidos.html" class="card-item">
+                        <span class="item-tag">Práctica 1</span>
+                        <h3>Estilos Embebidos</h3>
+                        <p class="desc">Aplicación directa de hojas de estilo dentro del documento mediante la etiqueta <code>&lt;style&gt;</code>.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <a href="/Tarea/ejemplo2.html" class="card-item">
+                        <span class="item-tag">Práctica 2</span>
+                        <h3>Ejemplo 2</h3>
+                        <p class="desc">Estructuración y jerarquía básica de elementos en el cuerpo del documento.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <a href="/Tarea/paises.html" class="card-item">
+                        <span class="item-tag">Práctica 3</span>
+                        <h3>Fichas de Países</h3>
+                        <p class="desc">Diseño de tarjetas de presentación geográfica e integración de tablas de datos tabulares.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <a href="/Tarea/Serie.html" class="card-item">
+                        <span class="item-tag">Práctica 4</span>
+                        <h3>Showcase de Serie</h3>
+                        <p class="desc">Maquetación temática de contenidos audiovisuales con tipografías y recursos gráficos.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+
+                    <a href="/Tarea/IaPagina_1.html" class="card-item">
+                        <span class="item-tag">Reto IA</span>
+                        <h3>IA Página 1</h3>
+                        <p class="desc">Primera exploración y generación de componentes web asistidos por Inteligencia Artificial.</p>
+                        <span class="card-link">Explorar práctica &rarr;</span>
+                    </a>
+                </div>
             </section>
 
-            <!-- Sección Multimedia -->
-            <section class="video-card">
-                <h2>Demostración en Video</h2>
-                <p>Reproduce el video interactivo a continuación:</p>
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/jBcYPT4WdD8" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
+            <!-- ==========================================
+                 SECCIÓN MULTIMEDIA (Videos de Sustentación)
+                 ========================================== -->
+            <section class="videos-section">
+                <div class="video-group-header">
+                    <h2>Demostraciones en Video</h2>
+                    <p>Sustentaciones interactivas de las prácticas y retos desarrollados en el ciclo:</p>
+                </div>
+
+                <div class="videos-grid">
+                    <!-- VIDEO GUÍA 2 (Nuevo) -->
+                    <div class="video-card">
+                        <div class="video-header">
+                            <span class="pill-tag current">Nuevo</span>
+                            <h3>Sustentación Guía 2: Reto IA</h3>
+                            <p>Explicación del sistema de diseño (design.md) y demostración en vivo de transiciones CSS.</p>
+                        </div>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/EsgDNSPlpM0" 
+                                title="Demostración Guía 2 - Reto IA" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO GUÍA 1 -->
+                    <div class="video-card">
+                        <div class="video-header">
+                            <span class="pill-tag history">Anterior</span>
+                            <h3>Sustentación Guía 1</h3>
+                            <p>Demostración y recorrido por los componentes maquetados en la primera práctica.</p>
+                        </div>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/jBcYPT4WdD8" 
+                                title="Demostración Guía 1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
 
+        <!-- PIE DE PÁGINA -->
         <footer>
-            <p>&copy; 2026 • Entrega de Guías y Proyectos Web</p>
+            <p>&copy; 2026 • Portafolio de Desarrollo Web I • Todos los derechos reservados</p>
         </footer>
     </div>
 </body>

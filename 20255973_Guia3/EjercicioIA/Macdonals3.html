@@ -3,125 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="McDonald's El Salvador: Big Mac, Cuarto de Libra, desayunos y McCafé. Pide en McDelivery o en AutoMac.">
+    <meta name="theme-color" content="#14110f">
     <title>McDonald's El Salvador | Inicio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/Estilo.css">
 </head>
-<body class="layout">
+<body class="page">
 
-    <!-- ENCABEZADO -->
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <!-- ===== HEADER / NAVBAR (sticky) ===== -->
     <header class="site-header">
         <a href="Macdonals3.html" class="brand" aria-label="McDonald's El Salvador - Inicio">
-            <span class="logo" aria-hidden="true">M</span>
+            <span class="logo" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor"
+                     stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 28V15C4 6 15 6 16 16C17 6 28 6 28 15V28"/>
+                </svg>
+            </span>
             <span class="brand-text">
                 <strong>McDonald's</strong>
                 <small>El Salvador</small>
             </span>
         </a>
+
         <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="Macdonals3.html" aria-current="page">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
                 <li><a href="mc_servicio.html">Servicios</a></li>
                 <li><a href="mc_contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
+        <a href="mc_servicio.html" class="btn btn-primary btn-header">Pedir Ahora</a>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-            <span class="hero-tag">Promo de la semana</span>
-            <h1 id="hero-title">Cuarto de Libra <em>con Queso</em></h1>
-            <p>Carne 100% de res, queso derretido y el sabor que te encanta. Llévalo a casa en minutos.</p>
-            <div class="hero-actions">
-                <a href="mc_servicios.html" class="btn btn-primary">Pide en McDelivery</a>
-                <a href="#productos" class="btn btn-ghost">Ver el menú</a>
+    <main id="contenido" class="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <ul class="badges" aria-label="Destacados">
+                    <li class="badge badge-gold">Promo de la semana</li>
+                    <li class="badge">100% carne de res</li>
+                    <li class="badge">Hecho al momento</li>
+                </ul>
+
+                <h1 id="hero-title">Tu antojo,<br><span class="accent">a un clic</span> de distancia.</h1>
+
+                <p class="lead">
+                    Prueba el <strong>Cuarto de Libra con Queso</strong>: carne jugosa, queso derretido,
+                    pepinillos y cebolla en pan suave. Pídelo en McDelivery o pasa por AutoMac y
+                    disfrútalo donde estés en El Salvador.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="mc_servicio.html" class="btn btn-primary btn-lg">Pide en McDelivery</a>
+                    <a href="#menu" class="btn btn-ghost btn-lg">Ver el menú</a>
+                </div>
+
+                <dl class="stats">
+                    <div class="stat"><dt>Cobertura</dt><dd>Nacional</dd></div>
+                    <div class="stat"><dt>Entrega est.</dt><dd>30–45 min</dd></div>
+                    <div class="stat"><dt>Atención</dt><dd>Todos los días</dd></div>
+                </dl>
             </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">🍔</div>
-    </section>
 
-    <!-- PRODUCTOS DESTACADOS -->
-    <section class="products" id="productos" aria-labelledby="productos-title">
-        <h2 id="productos-title" class="section-title">Productos estrella</h2>
-        <div class="products-grid">
-            <article class="product-card">
-                <div class="product-img" aria-hidden="true">🍔</div>
-                <div class="product-body">
-                    <span class="product-cat">Hamburguesas</span>
-                    <h3>Big Mac</h3>
-                    <p>Dos carnes, salsa especial, lechuga, queso, pepinillos y cebolla en pan con ajonjolí.</p>
-                    <a href="mc_servicios.html" class="btn btn-small">Pedir ahora</a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-img" aria-hidden="true">🍳</div>
-                <div class="product-body">
-                    <span class="product-cat">Desayunos</span>
-                    <h3>McMuffin de Huevo</h3>
-                    <p>Huevo, queso y tocino en muffin inglés tostado. Empieza el día con energía.</p>
-                    <a href="mc_servicios.html" class="btn btn-small">Pedir ahora</a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-img" aria-hidden="true">☕</div>
-                <div class="product-body">
-                    <span class="product-cat">McCafé</span>
-                    <h3>Café Frappé</h3>
-                    <p>Café helado cremoso con topping de crema batida y chocolate.</p>
-                    <a href="mc_servicios.html" class="btn btn-small">Pedir ahora</a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-img" aria-hidden="true">🍦</div>
-                <div class="product-body">
-                    <span class="product-cat">Postres</span>
-                    <h3>McFlurry</h3>
-                    <p>Helado suave con trozos de galleta o chocolate. El cierre perfecto.</p>
-                    <a href="mc_servicios.html" class="btn btn-small">Pedir ahora</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- PANEL LATERAL: CANALES DE SERVICIO -->
-    <aside class="channels" aria-labelledby="canales-title">
-        <h2 id="canales-title" class="section-title">Canales de servicio</h2>
-
-        <div class="channel-card">
-            <span class="channel-icon" aria-hidden="true">🛵</span>
-            <div>
-                <h3>McDelivery</h3>
-                <p>Cobertura en San Salvador, Santa Tecla, Soyapango y otras zonas del país.</p>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-stage">🍔</div>
+                <div class="float-card float-card-a"><span>Desde</span><strong>$5.49</strong></div>
+                <div class="float-card float-card-b"><span>⭐ Favorito</span><strong>del mes</strong></div>
             </div>
-        </div>
+        </section>
 
-        <div class="channel-card">
-            <span class="channel-icon" aria-hidden="true">🚗</span>
-            <div>
-                <h3>AutoMac</h3>
-                <p>Pide sin bajar de tu vehículo en restaurantes con servicio al auto.</p>
+        <!-- ===== CATÁLOGO DESTACADO ===== -->
+        <section class="catalog" id="menu" aria-labelledby="menu-title">
+
+            <!-- Filtros CSS puro: radios ocultos + chips (labels) -->
+            <input class="sr-only" type="radio" name="filtro" id="f-all" checked>
+            <input class="sr-only" type="radio" name="filtro" id="f-burger">
+            <input class="sr-only" type="radio" name="filtro" id="f-breakfast">
+            <input class="sr-only" type="radio" name="filtro" id="f-cafe">
+
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Menú destacado</p>
+                    <h2 id="menu-title">Los favoritos de El Salvador</h2>
+                </div>
+                <div class="chips" role="group" aria-label="Filtrar por categoría">
+                    <label for="f-all" class="chip">Todo</label>
+                    <label for="f-burger" class="chip">Hamburguesas</label>
+                    <label for="f-breakfast" class="chip">Desayunos</label>
+                    <label for="f-cafe" class="chip">McCafé y postres</label>
+                </div>
             </div>
-        </div>
 
-        <a href="mc_servicios.html" class="btn btn-primary btn-block">Ver todos los servicios</a>
-    </aside>
+            <div class="cards">
+                <!-- Para usar fotos reales: reemplaza el <span class="emoji"> por
+                     <img src="images/big-mac.jpg" alt="Big Mac" loading="lazy"> -->
+                <article class="card" data-cat="burger">
+                    <div class="card-media tone-red">
+                        <span class="tag">Hamburguesas</span>
+                        <span class="emoji" aria-hidden="true">🍔</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Big Mac</h3>
+                        <p>Dos carnes, salsa especial, lechuga, queso, pepinillos y cebolla en pan con ajonjolí.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $5.25</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
 
-    <!-- FOOTER -->
+                <article class="card" data-cat="burger">
+                    <div class="card-media tone-gold">
+                        <span class="tag">Hamburguesas</span>
+                        <span class="emoji" aria-hidden="true">🍔</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Cuarto de Libra con Queso</h3>
+                        <p>Carne 100% de res a la plancha, doble queso, pepinillos, cebolla, kétchup y mostaza.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $5.49</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="burger">
+                    <div class="card-media tone-red">
+                        <span class="tag">Hamburguesas</span>
+                        <span class="emoji" aria-hidden="true">🧀</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Doble Cheeseburger</h3>
+                        <p>Dos carnes con queso derretido, pepinillos y cebolla. Clásica y contundente.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $3.99</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="breakfast">
+                    <div class="card-media tone-gold">
+                        <span class="tag">Desayunos</span>
+                        <span class="emoji" aria-hidden="true">🍳</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>McMuffin de Huevo</h3>
+                        <p>Huevo, queso y tocino en muffin inglés tostado. Empieza el día con energía.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $3.29</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="breakfast">
+                    <div class="card-media tone-amber">
+                        <span class="tag">Desayunos</span>
+                        <span class="emoji" aria-hidden="true">🥞</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Hotcakes con Miel</h3>
+                        <p>Tres hotcakes esponjosos con mantequilla y miel. Dulce para la mañana.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $3.49</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="cafe">
+                    <div class="card-media tone-coffee">
+                        <span class="tag">McCafé</span>
+                        <span class="emoji" aria-hidden="true">☕</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Capuchino McCafé</h3>
+                        <p>Espresso con leche vaporizada y espuma cremosa. Caliente o con hielo.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $2.49</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="cafe">
+                    <div class="card-media tone-coffee">
+                        <span class="tag">McCafé</span>
+                        <span class="emoji" aria-hidden="true">🧋</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Frappé de Caramelo</h3>
+                        <p>Café helado cremoso con crema batida y salsa de caramelo.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $3.19</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-cat="cafe">
+                    <div class="card-media tone-cream">
+                        <span class="tag">Postres</span>
+                        <span class="emoji" aria-hidden="true">🍦</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>McFlurry</h3>
+                        <p>Helado suave con trozos de galleta o chocolate. El cierre perfecto.</p>
+                        <div class="card-foot">
+                            <span class="price"><small>ref.</small> $2.29</span>
+                            <a href="mc_servicio.html" class="btn btn-small">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="note">Precios referenciales en USD. Pueden variar según el restaurante y la promoción vigente.</p>
+        </section>
+
+        <!-- ===== SERVICIOS: McDELIVERY & AUTOMAC ===== -->
+        <section class="services" id="servicios" aria-labelledby="servicios-title">
+            <div class="section-head section-head-center">
+                <div>
+                    <p class="eyebrow">Canales de servicio</p>
+                    <h2 id="servicios-title">Elige cómo disfrutarlo</h2>
+                </div>
+            </div>
+
+            <div class="bento">
+                <article class="bento-card bento-delivery">
+                    <span class="bento-icon" aria-hidden="true">🛵</span>
+                    <h3>McDelivery</h3>
+                    <p>Llevamos tu pedido a casa u oficina con cobertura en las principales ciudades del país:
+                       San Salvador, Santa Tecla, Soyapango, Antiguo Cuscatlán, San Miguel y Santa Ana.</p>
+                    <ul class="chips chips-static">
+                        <li class="chip">Pago en efectivo o tarjeta</li>
+                        <li class="chip">Seguimiento de pedido</li>
+                    </ul>
+                    <a href="mc_servicio.html" class="btn btn-primary">Pide en McDelivery</a>
+                </article>
+
+                <article class="bento-card bento-auto">
+                    <span class="bento-icon" aria-hidden="true">🚗</span>
+                    <h3>AutoMac</h3>
+                    <p>Pide, paga y recoge sin bajar de tu vehículo en los restaurantes con servicio al auto.</p>
+                    <a href="mc_contacto.html" class="btn btn-ghost">Ubicar un AutoMac</a>
+                </article>
+
+                <article class="bento-card bento-metric">
+                    <span class="metric">30-45</span>
+                    <span class="metric-label">minutos de entrega estimada</span>
+                </article>
+
+                <article class="bento-card bento-metric bento-metric-gold">
+                    <span class="metric">Nacional</span>
+                    <span class="metric-label">cobertura en zonas con servicio</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-        <p class="copyright">&copy; 2026 McDonald's El Salvador. Proyecto académico • Todos los derechos reservados.</p>
-        <ul class="footer-links">
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="mc_contacto.html">Contacto</a></li>
-        </ul>
-        <ul class="social" aria-label="Redes sociales">
-            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
-        </ul>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="Macdonals3.html" class="brand" aria-label="Inicio">
+                    <span class="logo" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor"
+                             stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 28V15C4 6 15 6 16 16C17 6 28 6 28 15V28"/>
+                        </svg>
+                    </span>
+                    <span class="brand-text"><strong>McDonald's</strong><small>El Salvador</small></span>
+                </a>
+                <p>Sitio académico de práctica web. Sabor, rapidez y servicio para toda la familia salvadoreña.</p>
+            </div>
+
+            <nav class="footer-col" aria-label="Navegación del pie">
+                <h4>Explora</h4>
+                <ul>
+                    <li><a href="Macdonals3.html">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="mc_servicio.html">Servicios</a></li>
+                    <li><a href="mc_contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Información legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Redes sociales">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="copyright">&copy; 2026 McDonald's El Salvador. Proyecto académico &bull; Todos los derechos reservados.</p>
     </footer>
 
 </body>

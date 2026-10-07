@@ -49,8 +49,15 @@
 {
   const codigo = "WEB2026";
   // 1. Muestre la longitud, el primer carácter y el último carácter.
+  console.log(codigo.length);
+  console.log(codigo[codigo.length - 1]);
+  console.log(codigo[0]);
+
   // 2. Obtenga el último carácter usando tanto [] como at().
+console.log(codigo[0]);
+console.log(codigo.at(-1))
   // 3. Construya con + la cadena "Curso: WEB2026".
+  console.log(`Curso: + ${codigo}`)
   // Resultados esperados: 7, "W", "6", "6" y "Curso: WEB2026".
   // Desarrollo:
 }
@@ -85,11 +92,18 @@
 
 // EJERCICIO 02. Normalización y extracción
 {
-  const entrada = "  Desarrollo Web  ";
+  const entrada = "  Desarrollo Web  "
   // 1. Guarde una versión sin espacios exteriores.
+  const entrada2 = entrada.trim();
+  console.log(entrada2);
   // 2. Obtenga una versión en minúsculas de la cadena limpia.
+  const Minusculas = entrada.toLowerCase();
+  console.log(Minusculas);
   // 3. Extraiga "Desarrollo" con slice() y "Web" con un índice negativo.
+  console.log(entrada2.slice(0 , 10));
+  console.log(entrada2.slice(-3));
   // 4. Muestre entrada para comprobar que conserva sus espacios.
+  console.log(entrada);
   // Desarrollo:
 }
 
@@ -124,8 +138,14 @@
 {
   const archivo = "guia.web.final.pdf";
   // 1. Obtenga la posición del primer punto y del último punto: 4 y 14.
+  console.log(archivo.indexOf("."));
+  console.log(archivo.lastIndexOf("."));
   // 2. Compruebe si contiene "web", comienza con "guia" y termina con ".pdf".
+  console.log(archivo.includes("web"));
+  console.log(archivo.startsWith("guia"));
+  console.log(archivo.endsWith(".pdf"));
   // 3. Busque "css" e interprete el resultado -1.
+  console.log(archivo.search("css"))
   // Desarrollo:
 }
 
@@ -187,8 +207,18 @@ Unidades: ${cantidad}`;
 {
   const entrada = "  CUADERNO;2;3.50  ";
   // 1. Elimine espacios exteriores y separe los campos mediante split().
-  // 2. Acceda a cada campo con [0], [1] y [2].
+  const Sinespacio = entrada.trim();
+  const campos = Sinespacio.split(";");
+  console.log(campos);
+   // 2. Acceda a cada campo con [0], [1] y [2].
+   console.log(campos[0]);
+   console.log(campos[1]);
+   console.log(campos[2]);
   // 3. Convierta el nombre a minúsculas y cantidad y precio a números.
+  const minu = campos[0];
+  console.log(minu.toLocaleLowerCase());
+  console.log(parseInt(campos[1]));
+  console.log(parseFloat(campos[2]))
   // 4. Genere con una plantilla literal: "Producto: cuaderno | Total: $7".
   // 5. Reemplace "cuaderno" por "libreta" en el mensaje obtenido.
   // Desarrollo:

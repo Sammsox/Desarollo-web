@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Summit 2026 | Inscripción</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header py-4 mb-4">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+      <div>
+        <p class="eyebrow mb-1">Desarrollo Web I · Práctica de eventos</p>
+        <h1 class="h3 mb-0 fw-bold">Tech Summit <span class="year">2026</span></h1>
+      </div>
+      <span class="badge text-bg-light align-self-start align-self-sm-center">Formulario interactivo</span>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-lg-7">
+        <section class="card shadow-sm border-0" aria-labelledby="tituloFormulario">
+          <div class="card-body p-4 p-md-5">
+            <h2 id="tituloFormulario" class="h4 fw-bold">Inscripción al evento</h2>
+            <p class="text-secondary mb-4">Completa tus datos y elige cómo deseas participar.</p>
+
+            <form id="formInscripcion" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" maxlength="60" placeholder="Ej. Ana Martínez" autocomplete="name" required>
+                <div class="d-flex justify-content-between mt-1">
+                  <small id="ayudaNombre" class="form-text mt-0">Escribe al menos 3 caracteres.</small>
+                  <small class="text-secondary" id="contadorNombre" aria-live="polite">0/60</small>
+                </div>
+                <div class="invalid-feedback" id="errorNombre">Ingresa un nombre de al menos 3 caracteres.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" autocomplete="email" required>
+                <div class="invalid-feedback" id="errorCorreo">Introduce un correo electrónico válido.</div>
+              </div>
+
+              <fieldset class="mb-4">
+                <legend class="form-label fw-semibold fs-6">Modalidad de asistencia</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="modalidad" id="modalidadVirtual" value="virtual" checked>
+                  <label class="form-check-label" for="modalidadVirtual">Virtual <span class="text-secondary">— Gratis</span></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="modalidad" id="modalidadPresencial" value="presencial">
+                  <label class="form-check-label" for="modalidadPresencial">Presencial <span class="text-secondary">— $15.00</span></label>
+                </div>
+              </fieldset>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="taller">
+                <label class="form-check-label" for="taller">Agregar taller práctico <span class="text-secondary">(+$10.00)</span></label>
+              </div>
+
+              <div class="mb-4">
+                <label for="comentarios" class="form-label fw-semibold">Comentarios <span class="fw-normal text-secondary">(opcional)</span></label>
+                <textarea class="form-control" id="comentarios" rows="3" maxlength="200" placeholder="¿Qué te interesa aprender?"></textarea>
+                <div class="text-end"><small id="contadorComentarios" class="text-secondary" aria-live="polite">0/200</small></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 py-2" id="btnEnviar">Confirmar inscripción</button>
+              <p class="text-secondary small mt-3 mb-0">Demostración local: no se envían datos a ningún servidor.</p>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <aside class="card border-0 shadow-sm summary-card" aria-labelledby="tituloResumen">
+          <div class="card-body p-4">
+            <h2 id="tituloResumen" class="h5 fw-bold">Resumen de inscripción</h2>
+            <p class="text-secondary small">Los valores cambian conforme interactúas con el formulario.</p>
+            <div class="d-flex justify-content-between py-2 border-bottom"><span>Modalidad</span><strong id="resumenModalidad">Virtual</strong></div>
+            <div class="d-flex justify-content-between py-2 border-bottom"><span>Taller práctico</span><strong id="resumenTaller">No</strong></div>
+            <div class="d-flex justify-content-between align-items-center pt-4 pb-2"><span class="fw-semibold">Total</span><strong id="total" class="display-6 fw-bold">$0.00</strong></div>
+          </div>
+        </aside>
+        <div id="mensajeResultado" class="mt-3" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

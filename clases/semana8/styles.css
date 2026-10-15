@@ -1,0 +1,11 @@
+:root { --brand: #8b0e13; --brand-dark: #670b0f; }
+body { background: #f5f6f8; color: #252b33; }
+.site-header { background: var(--brand); color: #fff; }
+.eyebrow { font-size: .77rem; letter-spacing: .09em; text-transform: uppercase; opacity: .82; }
+.year { opacity: .8; }
+.card { border-radius: 1rem; }
+.summary-card { position: sticky; top: 1.5rem; }
+.btn-primary { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand-dark); --bs-btn-hover-border-color: var(--brand-dark); --bs-btn-active-bg: var(--brand-dark); --bs-btn-active-border-color: var(--brand-dark); }
+.form-control:focus, .form-check-input:focus { border-color: #bb777a; box-shadow: 0 0 0 .25rem rgba(139,14,19,.12); }
+.form-check-input:checked { background-color: var(--brand); border-color: var(--brand); }
+@media (max-width: 991.98px) { .summary-card { position: static; } }

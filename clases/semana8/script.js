@@ -102,7 +102,14 @@ function validarCorreo() {
 // ACTIVIDAD 4 (blur): validar el nombre y el correo cuando
 // cada campo pierde el foco, sin esperar al envío del formulario.
 // TODO 4: listeners "blur" que llamen validarNombre / validarCorreo.
-
+function validarNombreBlur() {
+  validarNombre();
+}
+function validarCorreoBlur() {
+  validarCorreo();
+}
+nombre.addEventListener("blur", validarNombreBlur);
+correo.addEventListener("blur", validarCorreoBlur);
 // ============================================================
 // 6. EVENTO submit — EJEMPLO GUIADO + ACTIVIDAD FINAL
 // ============================================================

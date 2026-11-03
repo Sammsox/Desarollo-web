@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@utility input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+@utility btn-secondary {
+  @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+@utility btn-danger {
+  @apply bg-rose-50 text-rose-700 hover:bg-rose-100;
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Mar en la niebla">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c4252"/><stop offset="1" stop-color="#9fb4bd"/></linearGradient>
+    <linearGradient id="mar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b7886"/><stop offset="1" stop-color="#16262f"/></linearGradient>
+  </defs>
+  <rect width="800" height="310" fill="url(#cielo)"/>
+  <rect y="310" width="800" height="190" fill="url(#mar)"/>
+  <ellipse cx="240" cy="310" rx="360" ry="30" fill="#dfe8ea" opacity=".35"/>
+  <ellipse cx="600" cy="300" rx="320" ry="25" fill="#dfe8ea" opacity=".3"/>
+  <path d="M80 500 L336 316 L400 316 L336 500 Z" fill="#1c2a35"/><rect x="160" y="384" width="8" height="150" fill="#14202a"/><rect x="224" y="362" width="8" height="120" fill="#14202a"/><rect x="288" y="340" width="8" height="90" fill="#14202a"/><rect x="352" y="318" width="8" height="60" fill="#14202a"/>
+</svg>

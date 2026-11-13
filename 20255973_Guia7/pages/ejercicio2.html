@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Buscador de películas</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../../index.html" class="nav-link px-2 text-info"><i class="bi bi-house-door"></i> Portafolio</a></li>
+                    <li><a href="../pages/ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="../pages/ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="../pages/ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="../pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>
+                    <li><a href="../pages/ejercicio2.html" class="nav-link px-2 text-warning fw-bold">
+                            <i class="bi bi-check"></i> Ejercicio 2
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="px-4 pt-5 my-4 text-center">
+            <h1 class="display-5 fw-bold"><i class="bi bi-film"></i> Buscador de películas</h1>
+            <p class="lead">Consumo de la API <span class="fw-bold">Movie Database Alternative</span> de RapidAPI
+                con Fetch y async/await.</p>
+        </div>
+
+        <!-- API KEY DE RAPIDAPI -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <form id="idFormKey" class="row g-2 align-items-end">
+                    <div class="col-md-9">
+                        <label for="idApiKey" class="form-label fw-bold">
+                            <i class="bi bi-key"></i> API Key de RapidAPI
+                        </label>
+                        <input type="password" class="form-control" id="idApiKey"
+                            placeholder="Pegue aquí su X-RapidAPI-Key" autocomplete="off">
+                        <div class="form-text">Se guarda solo en este navegador.</div>
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button type="submit" class="btn btn-dark"><i class="bi bi-save"></i> Guardar key</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- BUSQUEDA (ENDPOINT DE LISTADO) -->
+        <form id="idFormBuscar" class="row g-2 mb-4">
+            <div class="col-md-6">
+                <input type="search" class="form-control" id="idBuscar" placeholder="Ej. Avengers, Batman, Toy Story"
+                    value="Avengers">
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="idTipo">
+                    <option value="">Todos los tipos</option>
+                    <option value="movie">Películas</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episodios</option>
+                </select>
+            </div>
+            <div class="col-md-3 d-grid">
+                <button type="submit" class="btn btn-primary" id="idBtnBuscar">
+                    <i class="bi bi-search"></i> Buscar
+                </button>
+            </div>
+        </form>
+
+        <!-- MENSAJES DE ESTADO (CARGA / ERRORES) -->
+        <div id="idEstado"></div>
+
+        <!-- LISTADO DE RESULTADOS -->
+        <div id="idResultados" class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3"></div>
+
+        <!-- PAGINACION -->
+        <div id="idPaginacion" class="d-flex justify-content-center align-items-center gap-3 my-4 d-none">
+            <button type="button" class="btn btn-outline-primary" id="idBtnAnterior">
+                <i class="bi bi-chevron-left"></i> Anterior
+            </button>
+            <span id="idTextoPagina" class="fw-bold"></span>
+            <button type="button" class="btn btn-outline-primary" id="idBtnSiguiente">
+                Siguiente <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL DE DETALLE (ENDPOINT DE DETALLE) -->
+    <div class="modal fade" id="idModalDetalle" tabindex="-1" aria-labelledby="idTituloDetalle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="idTituloDetalle">Detalle</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="idBodyDetalle"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ejercicio2.js" defer></script>
+
+</body>
+
+</html>

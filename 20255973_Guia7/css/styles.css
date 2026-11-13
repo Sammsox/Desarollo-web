@@ -1,0 +1,18 @@
+@import url("../bootstrap/icons/bootstrap-icons.css");
+
+/* Ejercicio 2: posters del listado y del detalle */
+.poster {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+#idResultados .card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#idResultados .card:hover,
+#idResultados .card:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
